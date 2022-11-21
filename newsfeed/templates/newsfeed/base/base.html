@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style %} <link rel="stylesheet" href="{% static 'newsfeed/styles/index.css' %}"> {% endblock %}
+    <title>News Home</title>
+</head>
+<body>
+    <nav id='menu'>
+      <input type='checkbox' value="X" id='responsive-menu' onclick='updatemenu()'>
+      <ul>
+        <li><a href='/newsfeed'>Home</a></li>
+        <li><a href='http://'>Local</a></li>
+        <li><a href='http://'>International</a></li>
+        <li><a href='http://'>Memes</a></li>
+        <li><a href='http://'>Account</a></li>
+      </ul>
+      <label></label>
+      </nav>
+      <script>
+        function updatemenu() {
+          if (document.getElementById('responsive-menu').checked == true) {
+            document.getElementById('menu').style.borderBottomRightRadius = '0';
+            document.getElementById('menu').style.borderBottomLeftRadius = '0';
+          }else{
+            document.getElementById('menu').style.borderRadius = '0px';
+          }
+        }
+        
+      </script>
+    <main >
+    {% block body %}
+
+    {% endblock %}
+    </main>
+</body>
+</html>

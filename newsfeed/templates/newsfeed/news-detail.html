@@ -1,0 +1,45 @@
+<title>News</title>
+{% extends 'newsfeed/base/base.html' %}
+{% load static %}
+{% block body %}
+<div class="details-main" align="center">
+
+    <style>
+        .details-main{
+            display: block;
+        }
+        img{
+            align-content: center;
+            height: 400px;
+            margin-top: 10px;
+        }
+        h3{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+            font-size: unset;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: brown;
+        }
+        p{
+            display: flex;
+            width: 650px;
+            align-items: center;
+    
+        }
+        @media screen and (max-width: 800px){
+            img{
+                height: 200px;
+            }
+            p{
+                width: 350px;
+            }
+        }
+    </style>
+        <div class="image" align="center">
+            <img src="{{ news_image.url }}" alt="">
+        </div>
+        <h3 align="center">{{ news_title }}</h3>
+        <p>{{ news_detail }}</p>
+</div>
+{% endblock %}

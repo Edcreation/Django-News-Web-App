@@ -1,0 +1,103 @@
+
+.news-box{
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #D1D8EC;
+    -webkit-box-shadow: 5px 5px 14px #c2c9db, -5px -5px 14px #e0e7fd;
+    box-shadow: 5px 5px 14px #c2c9db, -5px -5px 14px #e0e7fd;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 5px;
+    margin: 15px;
+}
+.news-image img{
+    height: unset;
+    width: 200px;
+    margin-right: 15px;
+}
+.news-des{
+    display: flex;
+    flex-direction: column;
+}
+.news-title{
+    display: block;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #9b2121;
+}
+.news-details{
+    display: none;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.news-details p{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* number of lines to show */
+                line-clamp: 2; 
+        -webkit-box-orient: vertical;
+}
+.news-auth{
+    font-size: 0.8rem;
+    align-items: center;
+    color: rgb(65, 46, 46);
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+.news-auth p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 15px;
+    background: #cc3d52;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
+    border: none;
+    margin-top: 10px;
+  }
+  .btn a{
+      text-decoration: none;
+      color: #ffffff;
+  }
+  
+  .btn:hover {
+    background: #075f12;
+    text-decoration: none;
+    color: #141A46;
+  }
+
+  @media screen and (max-width: 350px){
+      .news-title{
+          font-size: 15px;
+      }
+      .news-details{
+          font-size: 14px;
+      }
+      .news-auth{
+          margin-top: 10px;
+      }
+  }
+  @media screen and (max-width: 400px)
+  {
+    .news-title{
+        font-size: 15px;
+    }
+    .news-details{
+        font-size: 13px;
+    }
+    .news-auth{
+        margin-top: 10px;
+    }  
+    .news-image img{
+        width: 100px;
+
+    }
+
+  }

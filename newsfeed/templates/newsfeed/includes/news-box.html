@@ -1,0 +1,22 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'newsfeed/styles/news-box.css' %}">
+<div class="news-box">
+    <div class="news-image">
+        <img src="{{ image }}" alt="">
+    </div>
+    <div class="news-des">
+       <div class="news-words">
+        <div class="news-title" >{{ title }}</div>
+        <div class="news-details"  >
+                {{ details }}
+        </div>
+        </div>
+        <div class="news-auth">
+            <p>by (remy g.wagon)</p>
+        </div>
+        <div class="button">
+            <button class="btn"> <a href="{% url 'news-detail' news_item.slug %}">Read More ...</a></button>
+        </div>
+       </div>
+</div>
+

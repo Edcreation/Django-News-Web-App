@@ -1,0 +1,21 @@
+{% extends 'newsfeed/base/base.html' %}
+
+{% load static %} 
+{% block styles %} <link rel="stylesheet" href="{% static 'newsfeed/styles/index.css' %}"> {% endblock %}
+<body align="center">
+    {% block body %}
+    <main>
+        <section>
+            <ol>
+                {% for news_item in newsfeed %}
+                   {% include 'newsfeed/includes/news-box.html' with title=news_item.title details=news_item.details image=news_item.image.url %}
+                {% endfor %}
+            </ol>
+        </section>
+
+    </main>
+
+    {% endblock %}
+    
+</body>
+</html>
